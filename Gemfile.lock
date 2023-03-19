@@ -67,6 +67,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     bcrypt (3.1.18)
+    blueprinter (0.25.3)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -109,6 +110,7 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-arm64-darwin)
       racc (~> 1.4)
+    oj (3.13.23)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -159,8 +161,10 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  blueprinter
   bootsnap
   debug
+  oj
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
   sqlite3 (~> 1.4)

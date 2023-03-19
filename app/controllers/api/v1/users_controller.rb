@@ -4,7 +4,7 @@ module Api
       def create
         user = User.new(email: params[:email], first_name: params[:first_name], last_name: params[:last_name], phone: params[:phone], password: params[:password])
         if user.save
-          render json: { success: true, user: user,
+          render json: { success: true, user: UserBlueprint.render_as_hash(user, view: :normal),
                          status: 201 }
         else
           render json: { errors: "There was a problem creting a new user", status: 400 }
