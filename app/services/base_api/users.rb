@@ -6,10 +6,10 @@ module BaseApi
       begin
         user.save!
       rescue
-        return { success?: false } unless user.valid?
+        return ServiceContract.error("Error saving message") unless user.valid?
       end
 
-      { success?: true, payload: user }
+      ServiceContract.success(user)
     end
   end
 end
